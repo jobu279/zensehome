@@ -20,7 +20,7 @@ public class ZenseProperties {
 			try {
 				Properties prop = new Properties();
 		    	//String propFileName = new File("zensemqtt/config.properties").getAbsolutePath();
-				String propFileName = "zensemqtt/config.properties";
+				String propFileName = "resources/config.properties";
 	 
 				inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
 	 

@@ -37,7 +37,7 @@ public class ZenseMQTT implements MqttCallback {
 	}
 	
 	public static void main(String[] args) {
-		Log.logging("Starting ZenseHome MQTT listener");
+		Log.logging("Starting ZenseHome MQTT listener on " + mqttBrokerIP);
 		new ZenseMQTT().listenToMQTT();
 		//new ZenseMQTT().sendToMQTT();
 	}
@@ -46,7 +46,7 @@ public class ZenseMQTT implements MqttCallback {
 	    MqttClient client;
 	    
 	    try {
-	        client = new MqttClient("tcp://" + mqttBrokerIP, "ZenseMQTTReceiver2");
+	        client = new MqttClient("tcp://" + mqttBrokerIP, "ZenseMQTTReceiver");
             MqttConnectOptions connOpts = new MqttConnectOptions();
             //connOpts.setKeepAliveInterval( MQTT_KEEPALIVE);
             //connOpts.setCleanSession(true);
